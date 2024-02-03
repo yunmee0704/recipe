@@ -118,7 +118,7 @@ header{padding: 1rem; box-sizing: border-box;}
  h1{
 	font-size: 3rem; margin: 5rem 15px 2rem;
  }
- .post >div{margin: 15px; }
+ .post >div{margin: 0 15px 5rem; }
  .big-cell{
 	width: calc(60% - 30px);
 	height: 40rem;
