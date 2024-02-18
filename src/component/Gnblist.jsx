@@ -8,7 +8,9 @@ export default function Gnblist({onClose}){
 <div className='gnb-list'>
     <div className='logo_menu'>
         <h1><a href="/">Reciepe</a></h1>
-        <div className="menu" onClick={()=>{onClose()}}>X</div>
+        <div className="menu" onClick={()=>{onClose()}}><span class="material-symbols-outlined">
+close
+</span></div>
     </div>
     <div className='gnb'>
     <ul className='depth_1'>
@@ -45,13 +47,13 @@ export default function Gnblist({onClose}){
     <div className='right'>
         <div className='search'>
             <input placeholder='search'></input>
-            <span>X</span>
-            <button>검색</button>
+            <span class="material-symbols-outlined">close</span>
+            <span class="material-symbols-outlined serch-btn">search</span>
         </div>
         <ul className='sns'>
-            <li><a>인스타</a></li>
-            <li><a>페이스북</a></li>
-            <li><a>유튜브</a></li>
+            <li><a><img src={process.env.PUBLIC_URL +  '/img/instagram.png'} width="70%" /></a></li>
+            <li><a><img src={process.env.PUBLIC_URL +  '/img/facebook.png'} width="70%" /></a></li>
+            <li><a><img src={process.env.PUBLIC_URL +  '/img/youtube.png'} width="70%" /></a></li>
         </ul>
     </div>
     </div>

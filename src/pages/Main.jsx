@@ -17,8 +17,8 @@ export default function Main(){
         <div>
             <header>
                 <div className='logo_menu'>
-                    <h1><a href="/">Reciepe</a></h1>
-                    <button className="menu"onClick={()=>{toggleMenu()}}>메뉴</button>
+                    <h1><a href="/">Reciepe</a></h1>              
+                        <span class="menu material-symbols-outlined"onClick={()=>{toggleMenu()}}>menu</span>                   
                         {isMenuOpen && <Gnblist onClose={() => setIsMenuOpen(false)} />}
                 </div>
                 <div className='gnb'>
@@ -76,11 +76,15 @@ export default function Main(){
                <SmallCell/>
                <SmallCell/>
                <SmallCell/>
-               <SmallCell/>         
-               <SmallCell/>
-               <SmallCell/>             
+               <SmallCell/>                     
             </div>
             </div>
+            <footer>
+                <div className='footer-box'>
+                    <h2>Reciepe</h2>
+                    <p>Reciepe.CO.KR IS OPERATED BY DOOSAN MAGAZINE</p>
+                </div>
+            </footer>
         </div>
         
     )
