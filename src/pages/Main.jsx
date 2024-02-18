@@ -7,13 +7,19 @@ import SmallCell from '../component/SmallCell';
 
 
 export default function Main(){
-    let [gnbList , setGnbList] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
+
     return(
         <div>
             <header>
                 <div className='logo_menu'>
                     <h1><a href="/">Reciepe</a></h1>
-                    <button className="menu" onClick={()=>{setGnbList(!gnbList)}}>메뉴</button>
+                    <button className="menu"onClick={()=>{toggleMenu()}}>메뉴</button>
+                        {isMenuOpen && <Gnblist onClose={() => setIsMenuOpen(false)} />}
                 </div>
                 <div className='gnb'>
                 <ul>
@@ -31,9 +37,7 @@ export default function Main(){
                     <h3>향과 맛이 일품! 오징어볶음</h3>
                 </div>
             </div>
-            {
-                gnbList === true? <Gnblist></Gnblist> : null
-            }
+         
             <h1 className='post-title'>TODAY'S STORIES</h1>
             <div className='post'>
                 <Bigcell/>

@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	position: relative;
 }
 ol, ul {
 	list-style: none;
@@ -60,7 +61,7 @@ table {
 }
 
 /* main */
-header{padding: 1rem; box-sizing: border-box;}
+header{box-sizing: border-box;}
 .logo_menu{position: relative; text-align: center;} 
 .logo_menu h1{font-size: 50px; font-family: 'PT Serif', serif;}
 .logo_menu .menu{position: absolute; top: 10px; right: 24px;}
@@ -81,7 +82,6 @@ header{padding: 1rem; box-sizing: border-box;}
 	padding: 3rem 1rem;
 	
  }
-
  .gnb-list .logo_menu{text-align: left;}
  .gnb-list .gnb{display: flex; justify-content: space-between;}
  .gnb-list .gnb ul{display:block; margin: 0; padding: 0 1rem;}
@@ -92,7 +92,7 @@ header{padding: 1rem; box-sizing: border-box;}
  .gnb-list .right .search{width: 100%;  position: relative; padding: 1rem;}
  .gnb-list .right input{width: 100%; height: 2rem; border:none; background-color: transparent; font-size: 2rem; border-bottom: 2px solid #333; padding-bottom: 1rem;}
  .gnb-list .right span{position: absolute;top: 1rem; right: 4rem;}
- .gnb-list .right button{position: absolute;top: 1rem; right: 1rem; width: 2rem; height: 2rem; background-color: transparent; border-style: none; color:#fff;}
+ .gnb-list .right button{position: absolute;font-size: 0; top: 0; right: 1rem; width: 2rem; height: 2rem; background-color: transparent; border-style: none; color:#fff;}
  .gnb-list .right .sns {width: 100%;padding-top: 12rem; display: flex; justify-content: space-around;}
 
 
@@ -115,6 +115,7 @@ header{padding: 1rem; box-sizing: border-box;}
  .post{
 	display: flex;
  }
+
  h1{
 	font-size: 3rem; margin: 5rem 15px 2rem;
  }
@@ -126,10 +127,19 @@ header{padding: 1rem; box-sizing: border-box;}
 
  }
  .big-cell a{ width: 100%; height: 100%; display: block; position: relative; }
- .big-cell a .text-box{position: absolute; bottom: 0; left: 0; right: 0;padding: 1rem; color: #fff;}
+ .big-cell a .text-box{position: absolute; bottom: 0; left: 0; right: 0;padding: 3rem 1rem; color: #fff;}
  .big-cell a .text-box strong, span{font-size: 1.2rem; }
  .big-cell a .text-box strong:after{content: ''; width: 1px; height: 1rem; vertical-align: 0.1rem; display: inline-block; margin: 0 0.5rem; background: #fff;}
  .big-cell a p{font-size: 2rem; margin-top: 1rem; line-height: 1.2;}
+
+ @media  screen and (max-width: 1300px) {
+	.post{
+		display: block;
+	}
+	.big-cell{
+		width: calc(100% - 30px);
+	}
+ }
 
  .grid-cell{display: flex; flex-wrap: wrap;}
  .grid-cell.block{display: flex; flex-wrap: nowrap; justify-content: space-between; width: 100%;}
@@ -139,12 +149,15 @@ header{padding: 1rem; box-sizing: border-box;}
  .grid-cell .small-cell .img-box{width: 100%; height: 11rem; background: #ccc;}
  .grid-cell .small-cell .text-box{margin-top: 1rem;}
  .grid-cell .small-cell .text-box strong {font-size: 1rem; }
- .grid-cell .small-cell .text-box p {font-size: 1.3rem; font-weight: 900; margin: 2rem 0; letter-spacing: -1px;}
+ .grid-cell .small-cell .text-box p {font-size: 1.3rem; font-weight: 900; margin: 1rem 0 1.5rem; letter-spacing: -1px;}
  .grid-cell .small-cell .text-box span {font-size: 0.8rem; color:#bbb}
  .grid-cell .small-cell .text-box span:after{content: ''; display: inline-block; width: 1px; height: 0.8rem; background: #ccc; margin: 0 0.5rem;}
  .grid-cell .small-cell .text-box span:last-child:after{display: none;}
 
  
+ @media  screen and (max-width: 768px) {
+.grid-cell .small-cell {margin-right: 30px;}
+ }
 
 
 

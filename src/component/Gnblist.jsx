@@ -1,15 +1,14 @@
 import { useState } from "react"
 
 
-export default function Gnblist(){
-    const [isOpen, setMenu] =useState(false);
-    const gnb = document.querySelector('.gnb-list');
+export default function Gnblist({onClose}){
+
 
    return(
-    <div className='gnb-list'>
+<div className='gnb-list'>
     <div className='logo_menu'>
         <h1><a href="/">Reciepe</a></h1>
-        <div className="menu" onClick={()=>{setMenu(!isOpen)}}>X</div>
+        <div className="menu" onClick={()=>{onClose()}}>X</div>
     </div>
     <div className='gnb'>
     <ul className='depth_1'>
@@ -56,9 +55,7 @@ export default function Gnblist(){
         </ul>
     </div>
     </div>
-    {/* {
-                isOpen === true? gnb.setStyle({display:'none'}) :  gnb.setStyle({display:'block'})
-            } */}
+   
 </div>
    )
 }
